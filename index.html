@@ -164,26 +164,29 @@
 
   <script>
     // smooth scroll with offset
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e){
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            const headerOffset = 300; // header height
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+	document.querySelectorAll('nav a').forEach(anchor => {
+		anchor.addEventListener('click', function(e){
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			const header = document.querySelector('header');
+			const headerOffset = header.offsetHeight + 15; // small extra padding
+			const elementPosition = target.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        });
-    });
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth"
+			});
+		});
+	});
   </script>
 
 
 	
 </body>
 </html>
+
 
 
 
