@@ -129,7 +129,17 @@
       <br/>
       <p>If you'd like to reach out to me directly, feel free to fill out the form below:</p>
 
-      <form >
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+		   <!-- Required Web3Forms Access Key -->
+	    <input type="hidden" name="access_key" value="a6611899-6c5d-40f7-9975-c42bd521845b">
+	
+	    <!-- Where to receive the messages -->
+	    <input type="hidden" name="email" value="officialcarparking2025@gmail.com">
+	
+	    <!-- Optional success redirect -->
+	    <input type="hidden" name="redirect" value="https://your-website.com/success.html">
+		  
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required placeholder="Enter your name" />
         
@@ -171,4 +181,5 @@
   </script>
 </body>
 </html>
+
 
